@@ -33,7 +33,7 @@ export function App () {
       return;
     } else {
       const newContact = { id: nanoid(), ...contactData };
-      setContacts([newContact, ...contacts]);
+      setContacts(PrevState => [newContact, ...PrevState]);
     }
   };
 
