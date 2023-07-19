@@ -21,7 +21,7 @@ export function App () {
   }, [contacts, filterValue])
 
   const onDeleteContact = id => {
-    setContacts(contacts.filter(contact => contact.id !== id));
+    setContacts(PrevState => PrevState.filter(contact => contact.id !== id));
   };
 
   const onAddContact = contactData => {
